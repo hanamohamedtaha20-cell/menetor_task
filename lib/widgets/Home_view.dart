@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:menetor_task/thems/App_colors.dart';
 import 'Food_item.dart';
 
-
-
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
@@ -25,8 +23,7 @@ class HomeView extends StatelessWidget {
                       children: [
                         Icon(Icons.shopping_cart_rounded,color: AppColors.primarycolor,size: 24,),
                         Text("My basket",style: TextStyle(fontSize: 10,color: Colors.black),
-                        )
-                      ],
+                        )],
                     ),
                   ],
                 ),
@@ -49,7 +46,7 @@ class HomeView extends StatelessWidget {
                             hintStyle: TextStyle(
                                 color: Colors.grey
                             ),
-                            border: OutlineInputBorder(
+                              border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(15),
 
                             ),
@@ -80,7 +77,6 @@ class HomeView extends StatelessWidget {
                       }, separatorBuilder: (context,index)=> SizedBox(width: 20,), itemCount: 5),
                 ),
                 SizedBox(height: 40,),
-
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -91,7 +87,6 @@ class HomeView extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 20,),
-
                 SizedBox(
                   height: 200,
                   child: ListView.separated(
@@ -108,4 +103,3 @@ class HomeView extends StatelessWidget {
     );
   }
 }
-//

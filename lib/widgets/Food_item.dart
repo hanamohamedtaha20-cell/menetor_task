@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:menetor_task/widgets/Product_deatails.dart';
+
+
 class FoodItem extends StatelessWidget {
   const FoodItem({super.key});
 
@@ -30,21 +33,25 @@ class FoodItem extends StatelessWidget {
           Expanded(
             child:
             CircleAvatar(
-              radius: 50,
-              backgroundImage: AssetImage("images/alfredo.jpg"),
-            ),
+              radius: 65,
+              backgroundImage: AssetImage("image/Quinoa Fruit Salad.jpg"),),
           ),
           SizedBox(height:10,),
-          Text("Honey line combo"),
+          Text("Quinoa Fruit Salad"),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text("\$20,00"),
-              Icon(Icons.add_circle,color: Colors.orangeAccent,)
-            ],
-          )
+              IconButton(onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ProductDetails(),
+                  ),
+                );
+              }, icon:  Icon(Icons.add_circle,color: Colors.orangeAccent,))
+            ],)
         ],
-      ),
-    );
+      ),);
   }
 }
